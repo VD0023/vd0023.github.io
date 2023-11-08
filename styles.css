@@ -288,12 +288,29 @@ body {
 
 /* CSS for small screens (up to 768px) */
 @media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
+    .greeting p {
+        font-size: 30px; /* Adjust text size for smaller screens */
     }
 
+    .header {
+        flex-direction: column; /* Stack header items vertically on small screens */
+        align-items: center; /* Center align items */
+    }
+
+    .name {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .contact-link {
+        font-size: 14px; /* Adjust font size */
+    }
+    
+    .container {
+        align-items: center; /* Center the buttons on small screens */
+    }
+    
     .portfolio-button, .github-button, .resume-button {
-        width: 100%;
+        width: 100%; /* Make buttons take full width on small screens */
     }
 }
 
