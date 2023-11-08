@@ -286,4 +286,20 @@ body {
     color: #FFA500; /* Change color to orange on hover */
 }
 
+/* CSS for small screens (up to 768px) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* For small screens, change to a vertical layout */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+
+    .portfolio-button, .github-button, .resume-button {
+        width: 100%; /* Make buttons full-width on small screens */
+    }
+
+    /* Add any other responsive styles you need */
+}
 
