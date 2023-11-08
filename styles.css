@@ -1,0 +1,289 @@
+/* CSS for button animation */
+.go-back-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.go-back-button:hover {
+    background-color: #0056b3;
+}
+body {
+    background-color: #000;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden; /* Hide overflow from falling digits */
+}
+
+.center-container {
+    text-align: center;
+    position: relative; /* Position relative for z-index */
+    z-index: 1; /* Place it above the falling digits */
+}
+
+#animate-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: pulse 2s infinite;
+}
+
+.matrix-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Place it below other content */
+    pointer-events: none; /* Allow interactions with elements behind the digits */
+    overflow: hidden;
+}
+
+.falling-digit {
+    position: absolute;
+    color: #00FF00; /* Green color */
+    user-select: none; /* Prevent text selection */
+    opacity: 0;
+    animation: fall 5s linear infinite;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3); /* Adjust the scale as needed */
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+
+/* CSS for button animation */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Set background color to black */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio-button, .github-button, .resume-button {
+    background-color: #FFFFE0; /* Very light yellow */
+    color: #333; /* Text color */
+    border: 2px solid transparent;
+    padding: 8px 16px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    font-size: 18px; /* Increase the text size */
+    line-height: 1.5;
+    width: 150px;
+    text-align: center; /* Center the text */
+}
+
+.portfolio-button::before, .github-button::before, .resume-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-image: url('border-design.png') 30 round; /* Replace 'border-design.png' with your design image */
+    border-image-slice: 1;
+    border-radius: 5px;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.portfolio-button:hover::before, .github-button:hover::before, .resume-button:hover::before {
+    border-color: #00FF00;
+    transform: scale(1.1);
+}
+
+/* CSS for the fire animation */
+@keyframes fire {
+    0% {
+        box-shadow: 0 0 5px 5px #FF4500; /* Add a fiery glow */
+    }
+    50% {
+        box-shadow: 0 0 10px 10px #FF4500; /* Increase the fiery glow */
+    }
+    100% {
+        box-shadow: 0 0 5px 5px #FF4500; /* Return to the original glow */
+    }
+}
+
+/* Apply the fire animation on button hover */
+.portfolio-button:hover, .github-button:hover, .resume-button:hover {
+    animation: fire 0.5s infinite; /* Apply the fire animation */
+}
+
+
+/* CSS for the "AI Development Intern" text */
+.intro-text {
+    font-size: 12px; /* Adjust the font size as needed */
+    font-family: "Arial", sans-serif;
+    color: #FFDB58; /* Mustard color */
+    text-align: center; /* Align the text to the center */
+    font-weight: bold; /* Add bold text */
+    margin-bottom: 10px; /* Add bottom margin for separation */
+}
+
+
+
+.greeting {
+    text-align: right; /* Center-align the text */
+    padding: 10px;
+}
+
+.greeting p {
+    font-weight: bold; /* Add bold text */
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+    font-size: 50px; /* Increase the text size */
+    color: white; /* Change text color to white */
+    margin: 0; /* Remove default margin */
+}
+
+/* Button to go back with animation */
+.go-back-link {
+    text-align: right;
+    margin-right: 10px;
+}
+
+.go-back-button {
+    background-color: #007BFF;
+    color: white; /* Text color */
+    border: 2px solid transparent;
+    padding: 2px 5px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+    font-size: 13px; /* Increase the text size */
+    line-height: 1.5;
+    width: 150px;
+    text-align: center; /* Center the text */
+}
+
+.go-back-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-image: url('border-design.png') 30 round; /* Replace 'border-design.png' with your design image */
+    border-image-slice: 1;
+    border-radius: 5px;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+.go-back-button:hover::before {
+    border-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Hover effect for the Go Back button */
+.go-back-button:hover {
+    background-color: #FFFF99;
+    color: #333;
+}
+
+/* Rest of your CSS remains the same */
+
+/* CSS for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black; /* Gradient from yellow to orange */
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.name {
+    font-weight: bold; /* Add bold text */
+    font-family: "Arial", sans-serif;
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust the font size as needed */
+    background: linear-gradient(to right, #FFD700, #FFA500);
+    -webkit-background-clip: text; /* Apply gradient to the text */
+    background-clip: text;
+    text-align: left; /* Align the text to the left */
+    padding-left: 10px;
+    flex: 1; /* Take up all available space on the left */
+}
+
+.contact-link {
+    font-family: "Arial", sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    position: fixed;
+    top: 10px;
+    right: 2%;
+}
+
+.contact-link:hover {
+    color: #FFA500; /* Change color to orange on hover */
+}
+
+
