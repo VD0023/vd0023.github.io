@@ -288,18 +288,22 @@ body {
 
 /* CSS for small screens (up to 768px) */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column; /* For small screens, change to a vertical layout */
-    }
-
     .buttons {
-        flex-direction: column; /* Stack buttons vertically on small screens */
+        flex-direction: column;
     }
 
     .portfolio-button, .github-button, .resume-button {
-        width: 100%; /* Make buttons full-width on small screens */
+        width: 100%;
     }
+}
 
-    /* Add any other responsive styles you need */
+/* CSS for medium screens (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Add styles for medium screens here */
+}
+
+/* CSS for large screens (1025px and above) */
+@media (min-width: 1025px) {
+    /* Add styles for large screens here */
 }
 
